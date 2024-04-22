@@ -1,39 +1,34 @@
 .header{
 background: linear-gradient(141deg, #53269d 0%, #6d31d0 100%);
-width: 1440px;
+width: 480px;
 height: 100px;
 display: flex;
+justify-content: space-between;
 align-items: center;
-justify-content:space-between;
-padding-left: 80px;
+padding: 40px;
 }
 
 .svg{
-    width: 120px;
-    height: 70px;
+    width: 100px;
+    height: 80px;
+    fill: white;
 }
 
 .navigation{
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 40px;
-
+display: none;
 }
-
-
 
 .nav{
     text-decoration: none;
-        font-family: "Avenir Next", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.4;
-        text-transform: uppercase;
-        text-align: center;
-        color: #fff;
-        transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
 }
+
 .nav:hover{
     color: #ffdb80;
 }
@@ -42,83 +37,87 @@ gap: 40px;
     color:#ffeb80;
 }
 
-
-
-
 .btn{
+    display: none;
     border: none;
     font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 1.6;
-        text-align: center;
-        color: #6d31d0;
-        border-radius: 30px;
-        padding: 9px 24px;
-        width: 180px;
-        height: 48px;
-        box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
-            background: linear-gradient(152deg, #ffeb80 0%, #fdbfa3 100%);
-            margin-right: 80px;
-            transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: #6d31d0;
+    border-radius: 30px;
+    padding: 9px 24px;
+    width: 180px;
+    height: 48px;
+    box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
+    background: linear-gradient(152deg, #ffeb80 0%, #fdbfa3 100%);
+    transition: all 0.3s ease-in-out;
+    margin-right: 20px;
 }
 
 .btn:hover{
-     color: #ffdb80;
+    color: #ffdb80;
     border: 1px solid #ffdb80;
     box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
     background: linear-gradient(90deg, #6d31d0 0%, #ab80ef 100%);
 }
 
-.dropdownContainer {
-    position: relative;
+.burger{
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+    display: block;
 }
 
-.dropdown {
-
-    text-decoration: none;
-    font-family: "Avenir Next", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.4;
-    text-transform: uppercase;
-    text-align: center;
-    color: #fff;
+.btnMenu{
     background-color: transparent;
     border: none;
-    appearance: none;
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    top: calc(100% + 5px);
-    z-index: 999;
 }
 
-.dropdown:hover {
-color: #ffdb80;
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+   .header{
+    width: 768px;
+    height: 120px; 
+    padding: 60px;
+   }
+
+   .btn{
+    display: block;
+    margin-left: auto;
+   }
+   
+   
+    }
+
+
+
+ @media screen and (min-width: 1158px) {
+    .header{
+        width: 1440px;
+        height: 100px;
+        }
+
+      .navigation {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+     }
+     
+.svg{
+    width: 120px;
+    height: 80px;
 }
 
-/* Freccia personalizzata */
-.dropdown::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    pointer-events: none;
-    transition: all 0.3s ease-in-out;
-}
+.btn{
+display: block;
 
-/* Freccia personalizzata quando il menu è aperto */
-.dropdown.open::after {
-    transform: translateY(-50%) rotate(-135deg);
 }
-
-/* Nascondi le opzioni predefinite del browser */
-.dropdown option {
+.burger{
     display: none;
 }
+
+ }
