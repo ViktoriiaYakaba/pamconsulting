@@ -1,16 +1,22 @@
 .container{ 
-    background-image: url('../../assets/picture_home-1-2x-min.png') ;
+    background-image: url('../../assets/picture-home-1-mob-min.png') ;
     background-size: cover;
     background-position: center;
-    width: 1440px;
-    height: 800px;
-    padding: 100px;
+    width: 480px;
+    height: 840px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 .list{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -36,7 +42,7 @@
 .title{
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 1.11111;
     color: #fff;
     line-height: 1.6;
@@ -48,7 +54,6 @@
     line-height: 1.6;
     font-weight: 600;
     color: #fff;
-    
     margin-bottom: 20px;
 }
 
@@ -61,8 +66,8 @@
         letter-spacing: 0.03em;
         color: #fff;
         text-shadow: 0 0 80px 0 #023f76, 0 4px 40px 0 rgba(0, 0, 0, 0.25);
-        width: 520px;
-        height: 120px;
+        width: 365px;
+        height: 136px;
 }
 
 .btn{
@@ -83,6 +88,7 @@ border-radius: 88px;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    margin-top: 40px ;
 }
 
 .btn:hover{
@@ -96,8 +102,56 @@ border-radius: 88px;
 
 
 @media screen and (min-width: 768px) and (max-width: 1158px){
+.container{
+    background-image: url('../../assets/picture-home-1-tab-min.png');
+    width: 768px;
+    height: 800px;
+    padding: 80px;
+    align-items: start;
+}
 
+.list{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: start;
+}
+
+.title{
+    font-size: 36px;
+}
+
+.text {
+    width: 520px;
+    height: 120px;
+}
+
+.btn{
+margin-top: 0;
+}
 }
 @media screen and (min-width: 1158px) {
+.container{
+background-image: url('../../assets/picture_home-1-min.png');
+    width: 1440px;
+    height: 800px;
+    padding: 100px;
+    align-items: start;
+}
 
+.list{
+    justify-content: start;
+}
+
+.title{
+    font-size: 36px;
+}
+.text{
+    width: 520px;
+    height: 120px;
+}
+
+.btn{
+    margin-top: 0;
+}
 }

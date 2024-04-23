@@ -1,6 +1,7 @@
 import { PopularSities } from "../popularSities/PopularSities";
 import css from './Title.module.css'
 
+
 export const Title = () => {
     return (
         <section >
