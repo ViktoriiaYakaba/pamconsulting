@@ -1,5 +1,5 @@
 .container{ 
-    background-image: url('../../assets/picture-home-1-mob-min.png') ;
+    background-image: url('../../assets/home-1-mob.png') ;
     background-size: cover;
     background-position: center;
     width: 480px;
@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
 }
 
 

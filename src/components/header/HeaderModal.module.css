@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 24px;
+    border: none;
+    background-color: transparent;
+}
+
+.icon{
+    width: 26px;
+    height: 26px;
+    fill: #434364;
+}
+
+.icon:hover{
+    fill: #53269d;
+}
+
+.list{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
+margin-top: 150px;
+}
+
+.listItem{
+    text-decoration: none;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    color: #434364;
+}
+
+.listItem:hover{
+    color: #53269d ;
+}
+
+
