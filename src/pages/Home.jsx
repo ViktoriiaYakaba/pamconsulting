@@ -3,6 +3,7 @@ import { OurServises } from '../components/ourServises/OurServises';
 import { MovingToParadise}  from '../components/movingParadise/MovingToParadise';
 import { Choose } from '../components/whyChooseCyprus/Choose';
 import { Location } from '../components/location/Location';
+import { WhoWeAre } from '../components/whoWeAre/WhoWeAre';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <MovingToParadise />
             <Choose />
             <Location />
+            <WhoWeAre />
 
         </div>
     );
