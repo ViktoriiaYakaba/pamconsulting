@@ -49,23 +49,27 @@ export const Contact = () => {
             {({ isSubmitting }) => (
                       <Form className={css.form}>
                 <Field type="text" name="name" placeholder="Name" className={css.input} />
-                <ErrorMessage name="name" component="div" className={css.error} />
+                          <div className={css.errorContainer}>
+                              <ErrorMessage name="name" component="div" className={css.error} />
+                          </div>
     
                 <Field type="email" name="email" placeholder="Email" className={css.input} />
-                <ErrorMessage name="email" component="div" className={css.error} />
+                <div className={css.errorContainer}><ErrorMessage name="email" component="div" className={css.error} /></div>
     
                 <Field type="text" name="phone" placeholder="Phone" className={css.input} />
-                <ErrorMessage name="phone" component="div" className={css.error} />
+                <div className={css.errorContainer}><ErrorMessage name="phone" component="div" className={css.error} /></div>
                           
                  <Field type="text" name="subject" placeholder="Subject" className={css.input} />
-                <ErrorMessage name="subject" component="div" className={css.error} />
+                <div className={css.errorContainer}><ErrorMessage name="subject" component="div" className={css.error} /></div>
     
                 <Field as="textarea" name="message" placeholder="Message" className={css.textarea} />
-                <ErrorMessage name="message" component="div" className={css.error} />
+                <div className={css.errorContainer}><ErrorMessage name="message" component="div" className={css.error} /></div>
     
-                <Field type="checkbox" name="terms" className={css.checkbox}  />
-                <label htmlFor="terms" className={css.label}>By clicking “Submit button” you accept our Terms & Conditions and have read our Privacy Policy and Disclaimer</label>
-                <ErrorMessage name="terms" component="div" className={css.error} />
+                <div className={css.privasy}>
+                  <Field type="checkbox" name="terms" className={css.checkbox}  />
+                  <label htmlFor="terms" className={css.label}>By clicking “Submit button” you accept our Terms & Conditions and have read our Privacy Policy and Disclaimer</label>
+                  <div className={css.errorContainer}><ErrorMessage name="terms" component="div" className={css.error} /></div>
+                </div>
     
                 <button type="submit" disabled={isSubmitting} className={css.btn}>
                   {isSubmitting ? 'Submitting' : 'Submit'}
