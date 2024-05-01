@@ -91,15 +91,18 @@ align-items: center;
 .container{
     width: 1440px;
     height: 672px;
+    justify-content: center;
 }
 
 .text{
     width: 580px;
     height: 94px;
 }
-.list{
-    gap: 80px;
-}
+
 .listItem{
+    width: 280px;
+}
+.list{
+    gap: 20px;
 }
 }

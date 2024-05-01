@@ -1,0 +1,157 @@
+.container{
+    padding: 40px 50px;
+     width: 480px;
+     display: flex;
+     background: linear-gradient(180deg, #828cde 0%, #6d31d0 100%);
+     gap: 24px;
+     flex-wrap: wrap;
+     align-items: center;
+}
+
+.titleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title{
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 0.725;
+    color: #fff;
+    position: relative;
+    border-bottom: 4px solid #fdbfa3;
+    padding-bottom: 24px;
+    width: 380px;
+}
+
+.text{
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+.btn{
+    border-radius: 30px;
+    padding: 9px 24px;
+    width: 187px;
+    height: 48px;
+    box-shadow: 0 14px 23px 0 rgba(28, 37, 44, 0.08);
+    background: #ffdb80;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: #6d31d0;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover{
+    border: 1px solid #ffdb80;
+    border-radius: 88px;
+    box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
+    background: linear-gradient(180deg, #828cde 0%, #6d31d0 100%);
+    background-clip: text;
+    color: #ffdb80;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 14px 10px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    opacity: 0.8;
+    border-radius: 20px;
+    width: 380px;
+    height: 600px;
+}
+
+.cardTitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #6d31d0;
+}
+
+.cardText{
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: #434364;
+}
+
+.cardBtn{
+    border-radius: 24px;
+    padding: 11px 27px;
+    width: 147px;
+    height: 50px;
+    box-shadow: 0 14px 23px 0 rgba(28, 37, 44, 0.08);
+    background: #ffdb80;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: #6d31d0;
+    border: none;
+}
+
+.cardBtn:hover{
+    border: 1px solid #ffdb80;
+    border-radius: 88px;
+    box-shadow: 0 4px 35px 0 rgba(255, 185, 175, 0.3);
+    background-color: linear-gradient(180deg, #828cde 0%, #6d31d0 100%);
+    background-clip: text;
+    color: #ffdb80;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1158px){
+.container{
+    width: 768px;
+    height: 902px;
+}
+
+.card{
+    flex-wrap: wrap;
+    width: 580px;
+    height: 440px;
+}
+}
+
+ @media screen and (min-width: 1158px){
+.container{
+    width: 1440px;
+    height: 518px;
+    justify-content: space-between;
+}
+
+.titleContainer{
+    gap: 30px;
+}
+
+.card {
+    flex-wrap: wrap;
+    width: 580px;
+    height: 440px;
+}
+
+.text{
+    width: 480px;
+}
+ }
+
+
+
