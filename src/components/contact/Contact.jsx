@@ -2,7 +2,9 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import icon1 from '../../assets/contact_tel.svg';
 import icon2 from '../../assets/icon_message.svg';
-import css from './Contact.module.css'
+import css from './Contact.module.css';
+import Checkbox from '@mui/material/Checkbox';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 export const Contact = () => {
   return (
@@ -29,7 +31,8 @@ export const Contact = () => {
               subject: '',
               message: '',
               terms: false
-            }}
+          }}
+             
             validationSchema={Yup.object().shape({
               name: Yup.string().required('Name is required'),
               email: Yup.string().email('Invalid email').required('Email is required'),
@@ -47,29 +50,29 @@ export const Contact = () => {
             }}
           >
             {({ isSubmitting }) => (
-                      <Form className={css.form}>
+                <Form className={css.form}>
                 <Field type="text" name="name" placeholder="Name" className={css.input} />
-                          <div className={css.errorContainer}>
-                              <ErrorMessage name="name" component="div" className={css.error} />
-                          </div>
-    
+                <ErrorMessage name="name" component="div" className={css.error} />
+                           
                 <Field type="email" name="email" placeholder="Email" className={css.input} />
-                <div className={css.errorContainer}><ErrorMessage name="email" component="div" className={css.error} /></div>
+                <ErrorMessage name="email" component="div" className={css.error} />
     
                 <Field type="text" name="phone" placeholder="Phone" className={css.input} />
-                <div className={css.errorContainer}><ErrorMessage name="phone" component="div" className={css.error} /></div>
+                <ErrorMessage name="phone" component="div" className={css.error} />
                           
                  <Field type="text" name="subject" placeholder="Subject" className={css.input} />
-                <div className={css.errorContainer}><ErrorMessage name="subject" component="div" className={css.error} /></div>
+                <ErrorMessage name="subject" component="div" className={css.error} />
     
                 <Field as="textarea" name="message" placeholder="Message" className={css.textarea} />
-                <div className={css.errorContainer}><ErrorMessage name="message" component="div" className={css.error} /></div>
+                <ErrorMessage name="message" component="div" className={css.error} />
     
-                <div className={css.privasy}>
-                  <Field type="checkbox" name="terms" className={css.checkbox}  />
-                  <label htmlFor="terms" className={css.label}>By clicking “Submit button” you accept our Terms & Conditions and have read our Privacy Policy and Disclaimer</label>
-                  <div className={css.errorContainer}><ErrorMessage name="terms" component="div" className={css.error} /></div>
-                </div>
+                 <div className={css.privacy} id="checkboxWrapper">
+                <FormControlLabel
+                control={<Checkbox  />}
+                label="By clicking “Submit button” you accept our Terms & Conditions and have read our Privacy Policy and Disclaimer"
+                className={css.label} 
+          />
+        </div>
     
                 <button type="submit" disabled={isSubmitting} className={css.btn}>
                   {isSubmitting ? 'Submitting' : 'Submit'}
