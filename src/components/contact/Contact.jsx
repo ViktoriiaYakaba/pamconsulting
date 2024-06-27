@@ -51,17 +51,19 @@ export const Contact = () => {
           >
             {({ isSubmitting }) => (
                 <Form className={css.form}>
-                <Field type="text" name="name" placeholder="Name" className={css.input} />
-                <ErrorMessage name="name" component="div" className={css.error} />
-                           
-                <Field type="email" name="email" placeholder="Email" className={css.input} />
-                <ErrorMessage name="email" component="div" className={css.error} />
-    
-                <Field type="text" name="phone" placeholder="Phone" className={css.input} />
-                <ErrorMessage name="phone" component="div" className={css.error} />
-                          
-                 <Field type="text" name="subject" placeholder="Subject" className={css.input} />
-                <ErrorMessage name="subject" component="div" className={css.error} />
+                <div className={css.inputContainer}>
+                  <Field type="text" name="name" placeholder="Name" className={css.input} />
+                  <ErrorMessage name="name" component="div" className={css.error} />
+                             
+                  <Field type="email" name="email" placeholder="Email" className={css.input} />
+                  <ErrorMessage name="email" component="div" className={css.error} />
+      
+                  <Field type="text" name="phone" placeholder="Phone" className={css.input} />
+                  <ErrorMessage name="phone" component="div" className={css.error} />
+                            
+                   <Field type="text" name="subject" placeholder="Subject" className={css.input} />
+                  <ErrorMessage name="subject" component="div" className={css.error} />
+                </div>
     
                 <Field as="textarea" name="message" placeholder="Message" className={css.textarea} />
                 <ErrorMessage name="message" component="div" className={css.error} />

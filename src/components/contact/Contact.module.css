@@ -79,7 +79,6 @@
 .form{
    display: flex;
    flex-direction: column;
-   flex-wrap: nowrap;
    justify-content: space-between;
    align-items: center;
    padding: 20px;
@@ -131,19 +130,25 @@
 
 .label{
     font-family: "Avenir Next", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
+        font-weight: 300;
+        font-size: 14px;
         line-height: 1.5;
         letter-spacing: 0.03em;
         color: #434364;
+        width: 340px;
+        height: 70px;
+        margin-top: 20px;
 }
 
-.privasy{
+.privacy{
     display: flex;
-    padding-top: 20px;
 }
 
-
+span{
+    text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #6d31d0;
+}
 
 
 .btn{
@@ -172,6 +177,15 @@
         width: 600px;
     }
 
+    .input{
+        width: 280px;
+    }
+.headerContainer{
+    display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
     
 }
 
